@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+
+    <!-- discord widget hook -->
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+        new Crate({
+            server: '964191448750780508', // DLA Test Server
+            channel: '964191449602211863' // #general-🔧
+        })
+    </script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>DLA Makerspace</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+
+    <!-- MUI -->
+    <script src="//cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <link href="//cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Style CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fork CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
+    <!-- icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+    <link rel="manifest" href="favi/site.webmanifest">
+
+    <script src="https://kit.fontawesome.com/73cd972fdf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- basic nav-->
+<header>
+    <a class="github-fork-ribbon" href="https://github.com/Jesssullivan/DLA-docs-public" data-ribbon="Contribute @ GitHub" title="Contribute @ GitHub...">Contribute</a>
+    <div class="topnav" >
+        <a class="active" href="/">🏠</a>
+        <a href="https://github.com/Jesssullivan/DLA-docs-public">📝</a>
+        <a href="https://ithacagenerator.org/">Ithaca Generator</a>
+        <a href="/form/">Submit Files</a>
+        <a href="mailto:js3227@cornell.edu">Contact</a>
+    </div>
+</header>
+
+<br>
+<br>
+
+<div class="flex-container">
+    <div class="flex-left">
+        <div class="container">
+            <div class="flex-item">
+                <iframe class="selected" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showPrint=0&mode=WEEK&showTabs=0&showCalendars=0&showTz=0&showTitle=0&src=cmcwcTF1MGZlbW8zMDAxaWJkOWI2bnRwcDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y19tdHUwaG1rYTRzZDRtcDJpazd1ZmdjcnJhZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19tZHI1NXBrY2ttcTM3ZGFvbm0wNDNzaGlkNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2FsZW5kYXJAaXRoYWNhZ2VuZXJhdG9yLm9yZw&color=%23616161&color=%23C0CA33&color=%23D81B60&color=%237CB342" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+                <h1 class="degg" ><i> 📅 </i>Calendar </h1>
+            </div>
+            <div class="flex-item">
+                <iframe class="selected" src="https://e.widgetbot.io/channels/964191448750780508/971441249640919120" ></iframe>
+
+                <h1 class="degg" ><i class="fab fa-discord"></i> Discord</h1>
+            </div>
+            <div class="flex-item">
+                <iframe class="selected" src="https://dlamaker.space/" style="border-width:0" frameborder="0" scrolling="yes"></iframe>
+                <h1 class="degg" ><i>📄</i>  Docs</h1>
+            </div>
+        </div>
+        <div class="flex-right">
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+    <!-- todo: setup webpack and dist / pub directory -->
+    <script src="../src/flex_card_animate.js"></script>
+
+    <div id="content-wrapper" class="card-hide">
+        <script>
+            {
+                var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+                    navigator.userAgent &&
+                    navigator.userAgent.indexOf('CriOS') === -1 &&
+                    navigator.userAgent.indexOf('FxiOS') === -1;
+
+                console.log(isSafari)
+                if (isSafari === true) {
+                    alert("Hey! On a mobile 🍎 device?  Join on Discord @ https://discord.gg/3FWpQtDMV2")
+                }
+            }
+        </script>
+    </div>
+</html>

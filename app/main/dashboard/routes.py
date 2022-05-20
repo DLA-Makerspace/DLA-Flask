@@ -1,0 +1,28 @@
+from flask import Blueprint
+from flask import current_app as app
+from flask import render_template, redirect
+
+
+dashboard_blueprint = Blueprint("dashboard", __name__)
+
+
+""" routing """
+
+
+# Index Routes:
+@dashboard_blueprint.route("/")
+def dash_index():
+    return redirect("/dashboard/home", code=302)
+
+
+@dashboard_blueprint.route('/home', methods=['GET'])
+def dash_home():
+    return render_template('home.html')
+
+
+""" fetch static """
+
+
+@dashboard_blueprint.route("<file>", methods=["GET", "POST"])
+def dash_filex(file):
+    return app.send_static_file(file)

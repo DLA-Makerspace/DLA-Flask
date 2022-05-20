@@ -11,4 +11,5 @@ pip3 install -r requirements.txt
 
 # setup: 
 npm run-script setup-app  # interactive setup and build
+npm run-script serve-app  # interactive choose and launch WSGI 
 ```

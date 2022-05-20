@@ -2,14 +2,6 @@
 
 <head>
 
-    <!-- discord widget hook -->
-    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-        new Crate({
-            server: '964191448750780508', // DLA Test Server
-            channel: '964191449602211863' // #general-🔧
-        })
-    </script>
-
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,6 +9,7 @@
 
     <!-- meta -->
     <meta charset="utf-8">
+    <link rel="manifest" crossorigin="use-credentials" href="site.webmanifest"/>
 
     <!-- MUI -->
     <script src="//cdn.muicss.com/mui-latest/js/mui.min.js"></script>
@@ -29,12 +22,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 
     <!-- icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
-    <link rel="manifest" href="favi/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <script src="https://kit.fontawesome.com/73cd972fdf.js" crossorigin="anonymous"></script>
+
+    <!-- discord widget hook -->
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+        new Crate({
+            server: '964191448750780508', // DLA Test Server
+            channel: '964191449602211863' // #general-🔧
+        })
+    </script>
 
 </head>
 
@@ -77,22 +78,22 @@
     </div>
 </div>
 
-    <!-- todo: setup webpack and dist / pub directory -->
-    <script src="../src/flex_card_animate.js"></script>
+<!-- todo: setup webpack and dist / pub directory -->
+<script src="flex_card_animate.js"></script>
 
-    <div id="content-wrapper" class="card-hide">
-        <script>
-            {
-                var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-                    navigator.userAgent &&
-                    navigator.userAgent.indexOf('CriOS') === -1 &&
-                    navigator.userAgent.indexOf('FxiOS') === -1;
+<div id="content-wrapper" class="card-hide">
+    <script>
+        {
+            var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+                navigator.userAgent &&
+                navigator.userAgent.indexOf('CriOS') === -1 &&
+                navigator.userAgent.indexOf('FxiOS') === -1;
 
-                console.log(isSafari)
-                if (isSafari === true) {
-                    alert("Hey! On a mobile 🍎 device?  Join on Discord @ https://discord.gg/3FWpQtDMV2")
-                }
+            console.log(isSafari)
+            if (isSafari === true) {
+                alert("Hey! On a mobile 🍎 device?  Join on Discord @ https://discord.gg/3FWpQtDMV2")
             }
-        </script>
-    </div>
+        }
+    </script>
+</div>
 </html>

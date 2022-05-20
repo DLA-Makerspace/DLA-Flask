@@ -5,7 +5,7 @@
   "scripts": {
     "setup-app": "chmod +x scripts/setup_app.sh && ./scripts/setup_app.sh",
     "serve-app": "chmod +x scripts/serve_app.sh && ./scripts/serve_app.sh",
-    "dev-flex-card-animate": "tsc ./src/flex_card_animate.ts",
+    "dev-flex-card-animate": "tsc ./src/flex_card_animate.ts --outFile ./pub/flex_card_animate.js",
     "dist-flex-card-animate": "webpack --config webpack/webpack.flex_card_animate_dist.ts",
     "clean-bundles": "find '.' -name \"*_bundle.js\" -print -delete"
   },

@@ -1,20 +1,22 @@
-.html {
-   overflow: hidden;
-}
 
 .flex-container {
-   overflow: hidden;
     display: flex;
     flex-direction: row;
 }
 
 .flex-left {
-    width: 60%;
+    width: 30%;
     height: 100vh;
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 2em;
+    align-self: flex-start;
+  overflow-y: hidden;
 }
 
 .flex-right {
-    width: 25%;
+  display: flex;
+      width: 65%;
 }
 /* selected card css */
 .selected {
@@ -40,13 +42,12 @@
   flex: 0 1 auto;
   background: #eab0f1;
   height: 100px;
-  margin: 2em;
+  margin: 3em;
   width: 180px;
   border-radius: 12px;
   opacity: 1;
   transition: all .5s ease-in-out;
   animation: fadeIn 1s;
-  z-index: 0;
 }
 
 /* toggle flex item contents visibility */
@@ -81,15 +82,13 @@
 
 
 .container {
-
     width: auto;
     height: auto;
 }
 
-html,
-body {
+.body {
   height: 100%;
-   overflow:hidden;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
@@ -213,6 +212,6 @@ button:disabled svg{
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #eab0f1;
   color: white;
 }

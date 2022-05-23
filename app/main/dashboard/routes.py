@@ -17,7 +17,17 @@ def dash_index():
 
 @dashboard_blueprint.route('/home', methods=['GET'])
 def dash_home():
-    return render_template('home.html')
+    return render_template('home.j2')
+
+
+@dashboard_blueprint.route('/usage', methods=['GET'])
+def dash_usage():
+    return render_template('usage.j2')
+
+
+@dashboard_blueprint.route('/docs', methods=['GET'])
+def dash_docs():
+    return app.send_static_file('docs.html')
 
 
 """ fetch static """

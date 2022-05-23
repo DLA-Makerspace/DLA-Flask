@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page title -->
+    <title>{%block title%} {{  url_for(request.endpoint).split('/')[-1] }}: DLA Dashboard{% endblock %}</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Fork CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest"  crossorigin="use-credentials"  href="site.webmanifest">
+
+    <!-- discord widget hook -->
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+        new Crate({
+            server: '964191448750780508', // DLA Test Server
+            channel: '964191449602211863' // #general-🔧
+        })
+    </script>
+
+</head>

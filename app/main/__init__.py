@@ -14,8 +14,12 @@ def create_app():
     app.config.from_pyfile("config/config.cfg")
 
     # set template & static paths:
+
+    # this is where jinja templates live:
     app.template_folder = "../../pub/"
-    app.static_folder = "../../pub/"
+
+    # this is where manifest and css live:
+    app.static_folder = "../../pub/static/"
 
     # upload --> classify config
     app.config['UPLOAD_EXTENSIONS'] = ['.mp3', '.wav', '.WAV', '.wave', '.WAVE']
@@ -30,8 +34,8 @@ def create_app():
     # start garbage collection daemon:
     Trash.truck()
 
-    # fetch static:
-    @app.route("/<f>/", methods=["GET", "POST"])
+    # fetch static at the root of the application:
+    @app.route("/<f>/", methods=["GET"])
     def appclcfx(f):
         print(f)
         return app.send_static_file(f)

@@ -8,6 +8,7 @@ interface Card extends Element {
   selectedCard?: boolean;
   showSelected?: any;
   style?: any;
+  saveStyle?: any;
   y?: number;
   x?: number;
   selectedToggle?: boolean | null;
@@ -47,6 +48,7 @@ class FlexCardAnimate {
       this.isAnimating = false;
       card.hidden = true;
     }, interval)
+    card.saveStyle = card.style;
   }
 
   showCards = (card: Card, interval: number) => {
@@ -54,6 +56,7 @@ class FlexCardAnimate {
       this.isAnimating = false;
       card.hidden = false;
     }, interval)
+    card.saveStyle = card.style;
   }
 
 
@@ -98,19 +101,19 @@ class FlexCardAnimate {
 
     card.animate(
         [], {
-          duration: 800,
+          duration: 1200,
           easing: "ease-in-out"
         });
+
+    card.saveStyle = card.style;
+
   }
 
   clearCards = (card: Card) => {
     card.selectedToggle = false;
     this.revealCards(this.cards);
     setTimeout(() => {
-      card.style.width = 180 + 'px';
-      card.style.position = 'relative';
-      card.style.left = 'auto';
-      card.style.top = 'auto';
+      card.style = card.saveStyle;
     }, 500)
     try {
       this.moveToDestination(card, this.getFirstCardPosition, this.selectedCardPosition);
@@ -142,19 +145,23 @@ class FlexCardAnimate {
 
         // if this is the card user just clicked, show the contents:
         if (card.selectedCard && showSelected !== null) {
+
           showSelected.style.display = 'block';
           this.getFirstCardPosition(this.cards);
+
           card.style.position = 'fixed';
-          card.style.width = 100 + '%';
+          card.style.width = 900 + 'px';
           card.style.top = sXY.y - 32 + 'px';
           card.style.left = sXY.x - 32 + 'px';
+          card.style.width = 85 + '%';
 
           this.fadeCards(this.cards);
 
           setTimeout(() => {
-            card.style.top = fXY.y - 32 + 'px';
-            card.style.left = fXY.x - 32 + 'px';
-          }, 1000)
+            card.style.top = fXY.y + 'px';
+            card.style.left = fXY.x + 'px';
+          }, 800)
+
         }
 
         // if this is not the card user just clicked, ensure contents are hidden:

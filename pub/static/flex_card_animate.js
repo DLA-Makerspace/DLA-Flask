@@ -4,8 +4,8 @@
  */
 var FlexCardAnimate = /** @class */ (function () {
     function FlexCardAnimate(isAnimating) {
-        var _this = this;
         if (isAnimating === void 0) { isAnimating = false; }
+        var _this = this;
         this.cards = document.querySelectorAll('.flex-item');
         // grab the button:
         this.button = document.querySelector('button');
@@ -26,12 +26,14 @@ var FlexCardAnimate = /** @class */ (function () {
                 _this.isAnimating = false;
                 card.hidden = true;
             }, interval);
+            card.saveStyle = card.style;
         };
         this.showCards = function (card, interval) {
             setTimeout(function () {
                 _this.isAnimating = false;
                 card.hidden = false;
             }, interval);
+            card.saveStyle = card.style;
         };
         this.fadeCards = function (cards) {
             cards.forEach(function (card) {
@@ -65,18 +67,16 @@ var FlexCardAnimate = /** @class */ (function () {
             console.log(translateX);
             console.log(translateY);
             card.animate([], {
-                duration: 800,
+                duration: 1200,
                 easing: "ease-in-out"
             });
+            card.saveStyle = card.style;
         };
         this.clearCards = function (card) {
             card.selectedToggle = false;
             _this.revealCards(_this.cards);
             setTimeout(function () {
-                card.style.width = 180 + 'px';
-                card.style.position = 'relative';
-                card.style.left = 'auto';
-                card.style.top = 'auto';
+                card.style = card.saveStyle;
             }, 500);
             try {
                 _this.moveToDestination(card, _this.getFirstCardPosition, _this.selectedCardPosition);
@@ -105,14 +105,15 @@ var FlexCardAnimate = /** @class */ (function () {
                         showSelected.style.display = 'block';
                         _this.getFirstCardPosition(_this.cards);
                         card.style.position = 'fixed';
-                        card.style.width = 100 + '%';
+                        card.style.width = 900 + 'px';
                         card.style.top = sXY.y - 32 + 'px';
                         card.style.left = sXY.x - 32 + 'px';
+                        card.style.width = 85 + '%';
                         _this.fadeCards(_this.cards);
                         setTimeout(function () {
-                            card.style.top = fXY.y - 32 + 'px';
-                            card.style.left = fXY.x - 32 + 'px';
-                        }, 1000);
+                            card.style.top = fXY.y + 'px';
+                            card.style.left = fXY.x + 'px';
+                        }, 800);
                     }
                     // if this is not the card user just clicked, ensure contents are hidden:
                     if (!card.selectedCard && showSelected !== null) {

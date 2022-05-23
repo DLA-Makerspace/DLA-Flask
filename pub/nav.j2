@@ -1,0 +1,13 @@
+{% include 'head.j2' %}
+
+<a class="github-fork-ribbon" href="https://github.com/Jesssullivan/DLA-Flask" data-ribbon="Contribute @ GitHub" title="Contribute @ GitHub...">Contribute</a>
+<div class="topnav" >
+    <a class="{%- if 'home' == url_for(request.endpoint).split('/')[-1] -%}active{%- endif %}" href="/">🏠</a>
+    <a class="{%- if 'usage' == url_for(request.endpoint).split('/')[-1] -%}active{%- endif %}" href="/dashboard/usage">Usage Agreement</a>
+    <a href="mailto:js3227@cornell.edu">Contact</a>
+    <a href="https://ithacagenerator.org/">Ithaca Generator</a>
+    <a href="https://transscendsurvival.org">Visit Jess</a>
+</div>
+
+
+

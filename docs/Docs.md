@@ -225,5 +225,5 @@ Note, to use the DLA Makerspace’s 3D printing equipment you **must use materia
 
 ##### Lasercutter-related software & drivers: <br>
 
-  - [Inkscape](https://inkscape.org/) *(Linux AppImage, Mac, Windows){:target="_blank" rel="noopener"}* <br>
+  - [Inkscape](https://inkscape.org/){:target="_blank" rel="noopener"} *(Linux AppImage, Mac, Windows)* <br>
   - [Epilog Software Suite](https://www.epiloglaser.com/tech-support/fusion-edge-pro-drivers/){:target="_blank" rel="noopener"} *(Windows)*

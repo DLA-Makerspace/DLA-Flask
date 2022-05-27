@@ -1,13 +1,12 @@
 {
   "name": "dla-flask",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Responsive web application for the Department of Landscape Architecture Makerspace at Cornell",
   "scripts": {
     "setup-app": "chmod +x scripts/setup_app.sh && ./scripts/setup_app.sh",
     "serve-app": "chmod +x scripts/serve_app.sh && ./scripts/serve_app.sh",
     "dev-flex-card-animate": "tsc ./src/flex_card_animate.ts --outFile ./pub/static/flex_card_animate.js",
-    "dist-flex-card-animate": "webpack --config webpack/webpack.flex_card_animate_dist.ts",
-    "clean-bundles": "find '.' -name \"*_bundle.js\" -print -delete"
+    "clean": "chmod +x scripts/cleanup.sh && ./scripts/cleanup.sh"
   },
   "repository": {
     "type": "git",

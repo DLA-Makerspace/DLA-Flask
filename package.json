@@ -1,6 +1,6 @@
 {
   "name": "dla-flask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Responsive web application for the Department of Landscape Architecture Makerspace at Cornell",
   "scripts": {
     "setup-app": "chmod +x scripts/setup_app.sh && ./scripts/setup_app.sh",

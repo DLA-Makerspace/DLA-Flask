@@ -20,7 +20,7 @@
 - [**tl;dr filaments**](#tldr-filament) <br>
 - [**Slicer Software**](#sliceware) <br>
   - [PrusaSlicer](#prusaslicer) <br>
-  - [SuperSlicer](#superslicer) <br> 
+  - [SuperSlicer](#superslicer) <br>
   - [Ultimaker Cura](#ulticura) <br>
   - [Lulzbot Cura](#lulzcura) <br>
 - [**Lasercutter Software**](#zapware) <br>
@@ -44,10 +44,8 @@
 
 - *Your preferred name*
 - *What materials you'd like to have processed*
-  - *If you are not providing you own material, please describe what you need, we will provide a cost estimate using in-house materials prior to proceeding.*
-  - On-site PLA starts at $.10 a gram
-  - On-site ASA, PETG & oddball filaments start at $.15 a gram
-  - On-site PVA starts at $.2 a gram
+  - *If you are not providing you own material, please describe what you need, we'll make it happen!*
+  - **On-site filaments (PLA, ASA, PETG, PVA) are free for students- within reason- on a first come, first serve basis.**
 - *Please compress your files into a tarball and/or gnu gzip archive.*  
   - 3d prints must be in `.obj`, `.step` or  `.3mf` format; relying on ASCII `.stl` is discouraged.
 Lasercut submissions must be in `.dwg`, `.dxf`, `.pdf` or `.svg` format; Inkscape SVG or PDF 1.5 are preferred formats.
@@ -62,7 +60,7 @@ Lasercut submissions must be in `.dwg`, `.dxf`, `.pdf` or `.svg` format; Inkscap
 <h4 id="filaments"> </h4>     
 
 
-### Filaments, properties, sources & costs: 
+### Filaments, properties, sources & costs:
 
 
 We strongly encourage users of the DLA Makerspace to purchase their own materials for printing, laser cutting and milling from our whitelist of sources.  While we endeavor to maintain a stock of materials for purchase and immediate use on site, it will always be much more cost efficient to purchase your own materials prior to utilizing our equipment.

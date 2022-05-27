@@ -1,12 +1,20 @@
-from flask import Blueprint
+from flask import Blueprint, request
 from flask import current_app as app
 from flask import render_template, redirect
-
 
 dashboard_blueprint = Blueprint("dashboard", __name__)
 
 
 """ routing """
+
+
+#  force ssl:
+@app.before_request
+def bfr_req():
+    if not request.is_secure:
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        return redirect(url, code=code)
 
 
 # Index Routes:

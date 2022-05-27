@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, request
 import os
 from .util.trashd import Trash
 
@@ -44,5 +44,13 @@ def create_app():
     @app.route("/")
     def index():
         return redirect("/dashboard/home", code=302)
+
+    #  force ssl:
+    @app.before_request
+    def bfr_req():
+        if not request.is_secure:
+            url = request.url.replace('http://', 'https://', 1)
+            code = 301
+            return redirect(url, code=code)
 
     return app

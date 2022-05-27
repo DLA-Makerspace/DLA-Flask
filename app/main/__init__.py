@@ -43,7 +43,7 @@ def create_app():
     @app.before_request
     def bfr_req():
         if not request.is_secure:
-            url = request.url.replace('http://', 'https://', 1)
-            return redirect(url.join('/dashboard/home'), code=302)
+            url = request.url.replace('http://', 'https://')
+            return redirect(url.join('dashboard/home'), code=301)
 
     return app

@@ -49,6 +49,7 @@ def create_app():
     # Index Routes:
     @app.route("/")
     def index():
-        return redirect("/dashboard/home", code=302)
+        if request.is_secure:
+            return redirect("/dashboard/home", code=301)
 
     return app

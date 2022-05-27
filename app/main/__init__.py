@@ -40,15 +40,12 @@ def create_app():
         print(f)
         return app.send_static_file(f)
 
-    @app.before_request
-    def bfr_req():
-        if not request.is_secure:
-            url = request.url.replace('http://', 'https://')
-            return redirect(url, code=301)
-
     # Index Routes:
     @app.route("/")
     def index():
+        if not request.is_secure:
+            url = request.url.replace('http://', 'https://')
+            return redirect(url, code=301)
         if request.is_secure:
             return redirect("/dashboard/home", code=301)
 

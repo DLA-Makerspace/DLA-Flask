@@ -44,13 +44,6 @@ def create_app():
     def bfr_req():
         if not request.is_secure:
             url = request.url.replace('http://', 'https://', 1)
-            code = 302
-            return redirect(url, code=code)
-
-    # Index Routes:
-    @app.route("/")
-    def index():
-        if request.is_secure:
-            return redirect("/dashboard/home", code=302)
+            return redirect(url.join('/dashboard/home'), code=302)
 
     return app

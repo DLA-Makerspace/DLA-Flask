@@ -7,10 +7,6 @@ from .util.trashd import Trash
 from .dashboard.routes import dashboard_blueprint
 from .docs.routes import docs_blueprint
 
-from flaskext.markdown import Markdown
-from jinja_markdown import MarkdownExtension
-
-
 def create_app():
 
     # Flask Config

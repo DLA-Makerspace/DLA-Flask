@@ -19,7 +19,40 @@ Web dashboard written for the Department of Landscape Architecture Makerspace at
 
  - - -
 
-#### How to use this repository:
+
+
+### Local setup:
+```
+## node:
+npm install
+
+## venv:
+python3 -m venv dla_venv
+source dla_venv/bin/activate
+pip3 install -r requirements.txt
+
+## setup:
+npm run-script setup-app  # interactive setup and build
+
+## (re)generate documentation:
+npm run-script generate-docs  # you will need Ruby and the Kramdown superset CLI installed
+
+## serve:
+npm run-script serve-app  # interactive choose and launch WSGI (Waitress or Werkzeug)
+
+## visit locally at:
+# 127.0.0.1:8080 
+
+## (re)transpile typescript source:
+npm run-script dev-flex-card-animate
+
+## cleanup:
+npm run-script clean
+
+```
+
+
+### How to use this repository:
 
 ```console
 .
@@ -38,10 +71,10 @@ Web dashboard written for the Department of Landscape Architecture Makerspace at
 │   │       └── trashd.py # serverside garbage collector
 ├── application.py #  main entry point; factory pattern
 ├── docs  # all live documentation lives here;
-│   ├── _config.yml # we use kramdown as our markdown renderer so we can let github render our documentation for us and still be able to escape iframes containing hyperlinks... hacky af
-│   ├── Docs.md  # documentation page loaded by the "Docs" widget
+│   ├── _config.yml # used to support github pages and keep our kramdown url new tab escapes
+│   ├── docs.md  # documentation page loaded by the "Docs" widget
 │   ├── redirected_index.void  # this redirect lives at various qr endpoints around the space and web
-│   └── UsageAgreement.md # usage agreement for students and clients of the space
+│   └── usage.md # usage agreement for students and clients of the space
 ├── LICENSE
 ├── package.json  
 ├── Procfile  # deploys to heroku on main
@@ -61,29 +94,3 @@ Web dashboard written for the Department of Landscape Architecture Makerspace at
 │   └── flex_card_animate.ts
 └── tsconfig.json # typescript rules live here
 ```
-
-
-
-
-Build locally:
-```
-# node:
-npm install
-
-# venv:
-python3 -m venv dla_venv
-source dla_venv/bin/activate
-pip3 install -r requirements.txt
-
-# setup:
-npm run-script setup-app  # interactive setup and build
-npm run-script serve-app  # interactive choose and launch WSGI
-```
-
-
-- - -
-
-
-*Todos:*
-- add webpack, tree shaking
-- add stripe endpoint for purchase of non-departmental filament (ie stuff sold by Jess / IG)

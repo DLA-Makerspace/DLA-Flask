@@ -11,4 +11,7 @@ rm -rf node-modules/
 echo -e '\n cleaning venv ... \n'
 rm -rf dla_venv
 
+echo -e '\n cleaning docs ... \n'
+rm -rf pub/**/*.html
+
 echo -e '\n ...cleanup done! \n'

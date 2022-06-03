@@ -5,13 +5,13 @@
 
 
 .flex-left {
-    width: 30%;
-    height: 96%;
-    position: -webkit-sticky; /* for Safari */
+  width: 30%;
+  height: 96%;
+  position: -webkit-sticky; /* for Safari */
   position: sticky;
-    top: 1em;
-    align-self: flex-start;
-    overflow-y: hidden;
+  top: 1em;
+  align-self: flex-start;
+  overflow-y: hidden;
   z-index: 999999;
 }
 
@@ -21,6 +21,7 @@
   position: relative;
   width: 65%;
 }
+
 /* selected card css */
 .selected {
   background: #fff;
@@ -63,7 +64,6 @@
    background: #e3e3e3;
  }
 
-
   .header {
     text-align: center;
     font-size: 24pt;
@@ -90,9 +90,7 @@
     font-size: 20pt;
     color: #FFFFFF;
     text-shadow: 3px 3px  8px #000000;
-  }:hover {
-      color: black;
- }
+  }
 
   .icon {
     text-align: center;

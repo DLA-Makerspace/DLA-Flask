@@ -1,9 +1,14 @@
 from flask import Flask, redirect
 import os
+
 from .util.trashd import Trash
 
 # Import Routes
 from .dashboard.routes import dashboard_blueprint
+from .docs.routes import docs_blueprint
+
+from flaskext.markdown import Markdown
+from jinja_markdown import MarkdownExtension
 
 
 def create_app():
@@ -30,6 +35,7 @@ def create_app():
 
     # Register Blueprints
     app.register_blueprint(dashboard_blueprint, url_prefix="/dashboard")
+    app.register_blueprint(docs_blueprint, url_prefix="/docs")
 
     # start garbage collection daemon:
     Trash.truck()

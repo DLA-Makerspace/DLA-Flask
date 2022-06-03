@@ -13,10 +13,6 @@ FRONTEND_DOMAIN_DEFAULT=${FLASK_DOMAIN_DEFAULT}":"${FLASK_PORT_DEFAULT}"/client/
 MEDIA_DIR_DEFAULT="$(pwd)/pub/"
 DIST_NOW_DEFAULT='YES'
 
-echo "Fetching latest rendered DLA Makerspace Docs:"
-wget -o 'pub/static/docs.html'  'https://jesssullivan.github.io/DLA-docs-public/index.html'
-wait
-
 read -p "Flask Directory [$FLASK_DIRECTORY_DEFAULT]: " FLASK_DIRECTORY
 FLASK_DIRECTORY=${FLASK_DIRECTORY:-$FLASK_DIRECTORY_DEFAULT}
 echo

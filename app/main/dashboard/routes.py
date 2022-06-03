@@ -27,7 +27,7 @@ def dash_usage():
 
 @dashboard_blueprint.route('/docs', methods=['GET'])
 def dash_docs():
-    return app.send_static_file('docs.html')
+    return app.send_static_file('index.md')
 
 
 """ fetch static """

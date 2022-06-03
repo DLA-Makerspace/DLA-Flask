@@ -5,13 +5,13 @@
 
 
 .flex-left {
-    width: 30%;
-    height: 96%;
-    position: -webkit-sticky; /* for Safari */
+  width: 30%;
+  height: 96%;
+  position: -webkit-sticky; /* for Safari */
   position: sticky;
-    top: 1em;
-    align-self: flex-start;
-    overflow-y: hidden;
+  top: 1em;
+  align-self: flex-start;
+  overflow-y: hidden;
   z-index: 999999;
 }
 
@@ -21,6 +21,7 @@
   position: relative;
   width: 65%;
 }
+
 /* selected card css */
 .selected {
   background: #fff;
@@ -62,7 +63,6 @@
    box-shadow: 1px 2px 2px #000;
    background: #e3e3e3;
  }
-
 
   .header {
     text-align: center;

@@ -22,17 +22,17 @@
   - [😭 Icky Materials](#icky-prints) <br>
 - [**Laser stock**](#laser-material) <br>
   - [DLA AutoCAD `.dwg` Template](https://github.com/Jesssullivan/DLA-docs-public/raw/main/laser-profiles/DLAMakerspace-LasercutterTemplate.dwg){:target="_blank" rel="noopener"} <br>
-- [**PLA is probably perfect**](#plamazing) <br>
-- [**tl;dr filaments**](#tldr-filament) <br>
 - [**Slicer Software**](#sliceware) <br>
   - [PrusaSlicer](#prusaslicer) <br>
   - [SuperSlicer](#superslicer) <br>
   - [Ultimaker Cura](#ulticura) <br>
+    - [DLA Cura Profiles](https://github.com/Jesssullivan/DLA-Flask/tree/dev/docs/cura-profiles){:target="_blank" rel="noopener"}
   - [Lulzbot Cura](#lulzcura) <br>
 - [**Lasercutter Software**](#zapware) <br>
   - [Inkscape](https://inkscape.org/){:target="_blank" rel="noopener"} *(Linux AppImage, Mac, Windows)* <br>
   - [Epilog Software Suite](https://www.epiloglaser.com/tech-support/fusion-edge-pro-drivers/){:target="_blank" rel="noopener"} *(Windows)*
-
+- [**PLA is probably perfect**](#plamazing) <br>
+- [**tl;dr filaments**](#tldr-filament) <br>
 
 
 <h4 id="form"> </h4>     

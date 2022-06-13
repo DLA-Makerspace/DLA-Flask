@@ -25,14 +25,15 @@ if ![ whichapp 'kramdown' &>/dev/null ]; then
     echo "exiting..."
     exit 0
 else
+
     touch "./pub/static/docs.html"
     touch "./pub/static/usage.html"
 
-    echo '<head><link rel="stylesheet" href="github-markdown-dark.css" /><title>DLA Makerspace Cleartext</title></head><div class="markdown-body"/>' > ./pub/static/docs.html
-    kramdown "./docs/docs.md" >> ./pub/static/docs.html
 
-    echo '<head><link rel="stylesheet" href="github-markdown-dark.css" /><title>DLA Makerspace Cleartext</title></head><div class="markdown-body"/>' > ./pub/static/usage.html
-    kramdown "./docs/usage.md" >> "./pub/static/usage.html"
+
+    kramdown "./docs/docs.md" > "./pub/static/docs.html"
+
+    kramdown "./docs/usage.md" > "./pub/static/usage.html"
 
 fi
 

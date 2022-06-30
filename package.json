@@ -6,7 +6,8 @@
     "setup-app": "chmod +x scripts/setup_app.sh && ./scripts/setup_app.sh",
     "serve-app": "chmod +x scripts/serve_app.sh && ./scripts/serve_app.sh",
     "generate-docs": "chmod +x scripts/generate_docs.sh && ./scripts/generate_docs.sh",
-    "dev-flex-card-animate": "tsc ./src/flex_card_animate.ts --outFile ./pub/static/flex_card_animate.js",
+    "dev-flex-card-driver": "tsc ./src/flex_card_driver.ts --outFile ./pub/static/flex_card_driver.js",
+    "dev-slide-card-driver": "tsc ./src/slide_card_driver.ts --outFile ./pub/static/slide_card_driver.js",
     "clean": "chmod +x scripts/cleanup.sh && ./scripts/cleanup.sh"
   },
   "repository": {

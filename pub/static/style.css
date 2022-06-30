@@ -1,23 +1,6 @@
 .flex-container {
-    display: flex;
-}
-
-.flex-left {
-  width: 30%;
-  height: 96%;
-  position: -webkit-sticky; /* for Safari */
-  position: sticky;
-  top: 1em;
-  align-self: flex-start;
-  overflow-y: hidden;
-  z-index: 999999;
-}
-
-.flex-right {
-  z-index: 0;
   display: flex;
-  position: relative;
-  width: 65%;
+  justify-content: center;
 }
 
 /* selected card css */
@@ -32,11 +15,48 @@
   box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
+  .flex-left {
+      width: 150%;
+      height: 96%;
+      top: 1em;
+      align-self: flex-start;
+      overflow-y: hidden;
+      z-index: 999999;
+  }
+
+  .flex-right {
+    z-index: 0;
+    display: flex;
+    position: relative;
+    padding-right: 1em;
+  }
+  .screen-view {
+    visibility: hidden;
+  }
+
+  .mobile-view {
+    visibility: visible;
+    display: inline-block;
+    padding-top: .1em;
+    padding-left: 1em;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot, .prev, .next {
+    visibility: hidden;
+  }
+
+  img {
+    width: 220px;
+    max-width: 220px;
+    border-radius: 12px;
+  }
 
   .degg {
     visibility: hidden;
   }
+
   .icon {
     text-align: center;
     font-size: 42pt;
@@ -71,8 +91,7 @@
   }
 
   .intro {
-    margin: .6em;
-    position: relative;
+    margin: .3em;
     text-align: left;
     font-size: 12pt;
     color: #e3e3e3;
@@ -80,7 +99,58 @@
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) {
+  .flex-left {
+    width: 50%;
+    height: 96%;
+    top: 1em;
+    align-self: flex-start;
+    overflow-y: hidden;
+    z-index: 999999;
+  }
+
+  .flex-right {
+    z-index: 0;
+    display: flex;
+    position: relative;
+    width: max-content;
+    padding-right: 2em;
+  }
+
+ .screen-view {
+    visibility: visible;
+   float: top;
+  }
+
+  .mobile-view {
+    visibility: hidden;
+    position: fixed;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot, .prev, .next {
+    position: inherit;
+    float: right;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .dot {
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  img {
+    width: 460px;
+    max-width: 460px;
+    padding-left: .1em;
+    border-radius: 12px;
+  }
+
   .degg {
     visibility: visible;
     padding-top: .1em;
@@ -124,7 +194,9 @@
   }
 
   .intro {
-    margin: .6em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 1em;
     position: relative;
     text-align: left;
     font-size: 16pt;
@@ -164,24 +236,8 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
-.container {
-    width: auto;
-    height: auto;
-}
-
-.body {
-  height: 100%;
-}
 * {
   box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px;
 }
 
 html,
@@ -189,27 +245,13 @@ body,
 input {
   background: #000000;
   margin:auto;
-  position:relative;
+  position:center;
   width: border-box;
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
-
-
-li {
-    list-style-type: none;
-}
-
-ul {
-    list-style-type: none;
-}
-
-
-/**
- * Header CSS
- */
 
 header {
   background-color: #FFFFFF;
@@ -232,17 +274,8 @@ header table {
   width: 100%;
 }
 
-/**
- * Content CSS
- */
-
 #content-wrapper {
   min-height: 100%;
-
-  /* sticky footer */
-  box-sizing: border-box;
-  margin-bottom: -100px;
-  padding-bottom: 100px;
 }
 
 /* Add a black background color to the top navigation */
@@ -253,10 +286,10 @@ header table {
 
 /* Style the links inside the navigation bar */
 .topnav a {
+  float: left;
   justify-content: center;
   justify-items: center;
   justify-self: center;
-  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 10px 10px;
@@ -275,4 +308,42 @@ header table {
 .topnav a.active {
   background-color: #eab0f1;
   color: white;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-height: 70%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide-card {
+  display: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #717171;
+}
+
+table {
+ float: left;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

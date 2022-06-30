@@ -69,7 +69,7 @@ Lasercut submissions must be in `.dwg`, `.dxf`, `.pdf` or `.svg` format; Inkscap
 ### Filaments, properties, sources & costs:
 
 
-We strongly encourage users of the DLA Makerspace to purchase their own materials for printing, laser cutting and milling from our whitelist of sources.  While we endeavor to maintain a stock of materials for purchase and immediate use on site, it will always be much more cost efficient to purchase your own materials prior to utilizing our equipment.
+We strongly encourage users of the DLA Makerspace to purchase their own materials for printing, laser cutting and milling from our whitelist of sources.  While we endeavor to maintain a stock of materials for immediate use on site, we cannot guarantee material availability or selection. 
 
 
 [**🔙 to menu 🧭**](#menu)
@@ -81,12 +81,13 @@ We strongly encourage users of the DLA Makerspace to purchase their own material
 
 Note, to use the DLA Makerspace’s 3D printing equipment you **must use materials from this whitelist of manufacturers** or received written permission to use an alternate filament from Jess.     
 
-- [FormFutura](https://www.formfutura.com/){:target="_blank" rel="noopener"}
-- [PolyMaker](https://polymaker.com/){:target="_blank" rel="noopener"}
-- [Ultimaker PVA](https://ultimaker.com/materials/pva){:target="_blank" rel="noopener"}
-- [3dxtech](https://www.3dxtech.com/){:target="_blank" rel="noopener"}
-- [Virtual Foundry](https://shop.thevirtualfoundry.com/){:target="_blank" rel="noopener"}
-- [Colorfabb](https://colorfabb.com/){:target="_blank" rel="noopener"}
+- [Atomic Filament 2.85mm](https://atomicfilament.com/){:target="_blank" rel="noopener"}
+- [FormFutura 2.85mm](https://www.formfutura.com/){:target="_blank" rel="noopener"}
+- [PolyMaker 2.85mm](https://polymaker.com/){:target="_blank" rel="noopener"}
+- [Ultimaker PVA 2.85mm](https://ultimaker.com/materials/pva){:target="_blank" rel="noopener"}
+- [3dxtech 2.85mm](https://www.3dxtech.com/){:target="_blank" rel="noopener"}
+- [Virtual Foundry 2.85mm](https://shop.thevirtualfoundry.com/){:target="_blank" rel="noopener"}
+- [Colorfabb 2.85mm](https://colorfabb.com/){:target="_blank" rel="noopener"}
 
 
 
@@ -166,15 +167,13 @@ Note, to use the DLA Makerspace’s 3D printing equipment you **must use materia
 
 ### ***Filaments we recommend for most projects and uses:***
 
-[**FormFutura 3mm filaments:**](https://www.formfutura.com/shop){:target="_blank" rel="noopener"}
+[**FormFutura 2.85mm filaments:**](https://www.formfutura.com/shop){:target="_blank" rel="noopener"}
 
 - FormFutura is a very large manufacturer of filament based in the Netherlands. They are generally considered one of the more advanced facilities for experimental thermoplastic filaments.  FormFutura is responsible for manufacturing numerous well known, heavily marketed brands.
-
- - Their “Premium PLA” and “Volcano PLA” are both awesome and usually the best choice for most projects and use cases.
-  - the effective differences among FormFutura's PLA products is primarily the amount of volumetric change above the glass transition temperature we can expect.
+ - the effective differences among FormFutura's PLA products is primarily the amount of volumetric change above the glass transition temperature we can expect.
 
 
-[**PolyMaker 3mm filaments:**](https://us.polymaker.com/){:target="_blank" rel="noopener"}
+[**PolyMaker 2.85mm filaments:**](https://us.polymaker.com/){:target="_blank" rel="noopener"}
 
 - Polymaker is a manufacturer of filaments based in China with a focus on environmental longevity.  Their product line is limited in breadth but extremely affordable, globally available and manufactured / shipped responsibly.
 
@@ -206,7 +205,7 @@ Note, to use the DLA Makerspace’s 3D printing equipment you **must use materia
 <h4 id="ulticura"> </h4>     
 
   - [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura){:target="_blank" rel="noopener"} *(Linux AppImage, Mac, Windows)* <br>
-    -  Cura originated as a Free & Open Source slicer project.  Unfortunately Cura has been since been absorbed into Ultimaker as a primarily proprietary freemium software closely tied to Ultimakers products.  To fully utilize the DLA Makerspace's Ultimaker equipment, user's must begrudgingly use this proprietary fork.  
+    -  Cura originated as a Free & Open Source slicer project.  Unfortunately Cura has been absorbed into Ultimaker as a primarily proprietary freemium software closely tied to Ultimakers closed source products.  To fully utilize the DLA Makerspace's Ultimaker equipment, user's must begrudgingly use this Cura fork.  
 
 
 <h4 id="lulzcura"> </h4>     

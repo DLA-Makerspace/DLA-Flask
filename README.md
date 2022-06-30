@@ -27,9 +27,11 @@ Web dashboard written for the Department of Landscape Architecture Makerspace at
 npm install
 
 ## venv:
+
 python3 -m venv dla_venv
 source dla_venv/bin/activate
 pip3 install -r requirements.txt
+
 
 ## setup:
 npm run-script setup-app  # interactive setup and build
@@ -95,6 +97,6 @@ npm run-script clean
 |   ├── generate_docs.sh
 │   └── setup_app.sh
 ├── src # typescript source lives here
-│   └── flex_card_animate.ts
+│   └── flex_card_driver.ts
 └── tsconfig.json # typescript rules live here
 ```

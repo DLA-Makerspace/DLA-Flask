@@ -78,8 +78,10 @@ echo
 
 if [ $DIST_NOW  == 'YES' ]; then
 
-  # npm run-script dist-flex-card-animate
-  npm run-script dev-flex-card-animate
+  npm run-script dev-flex-card-driver
+  wait
+
+  npm run-script dev-slide-card-driver
   wait
 
 fi

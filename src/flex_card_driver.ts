@@ -39,7 +39,7 @@ class FlexCardAnimate {
 
   // Get the first card position
   getFirstCardPosition: (cards: NodeListOf<Element>) => { x: any; y: any } = (cards) => {
-    const {y, x} = cards[0].getBoundingClientRect();
+    const {y, x} = cards[0]!.getBoundingClientRect();
     return {y, x};
   }
 
@@ -122,6 +122,7 @@ class FlexCardAnimate {
     }
   }
 
+
   main = () => {
 
     this.cards.forEach((card: Card) => {
@@ -173,6 +174,7 @@ class FlexCardAnimate {
     });
   }
 }
+
 
 const animatedPage = new FlexCardAnimate();
 animatedPage.main();

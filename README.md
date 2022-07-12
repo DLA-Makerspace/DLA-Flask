@@ -27,9 +27,11 @@ Web dashboard written for the Department of Landscape Architecture Makerspace at
 npm install
 
 ## venv:
+
 python3 -m venv dla_venv
 source dla_venv/bin/activate
 pip3 install -r requirements.txt
+
 
 ## setup:
 npm run-script setup-app  # interactive setup and build
@@ -64,17 +66,20 @@ npm run-script clean
 │   │   │   └── config.cfg.sample
 │   │   ├── dashboard
 │   │   │   ├── __init__.py
-│   │   │   └── routes.py  # all dashboard routes and endpoints live in here
+│   │   │   └── routes.py  # all /dashboard/ routes and endpoints live in here
+│   │   ├── docs
+│   │   │   ├── __init__.py
+│   │   │   └── routes.py  # all /docs/ routes and endpoints live here, serves prerendered html generated from the kramdown docs
 │   │   ├── __init__.py
 │   │   └── util
 │   │       ├── config.py # misc server configurations, timouts, serverside user directory routes
 │   │       └── trashd.py # serverside garbage collector
 ├── application.py #  main entry point; factory pattern
 ├── docs  # all live documentation lives here;
-│   ├── _config.yml # used to support github pages and keep our kramdown url new tab escapes
+│   ├── _config.yml # used to support github pages if needed; to specify kramdown as our markdown processor for url new tab escapes
 │   ├── docs.md  # documentation page loaded by the "Docs" widget
 │   ├── redirected_index.void  # this redirect lives at various qr endpoints around the space and web
-│   └── usage.md # usage agreement for students and clients of the space
+│   └── usage.md # usage agreement for students and clients of the space page loaded by the "Usage" widget
 ├── LICENSE
 ├── package.json  
 ├── Procfile  # deploys to heroku on main
@@ -89,8 +94,9 @@ npm run-script clean
 ├── scripts # scripts called from package.json live here
 │   ├── cleanup.sh
 │   ├── serve_app.sh
+|   ├── generate_docs.sh
 │   └── setup_app.sh
 ├── src # typescript source lives here
-│   └── flex_card_animate.ts
+│   └── flex_card_driver.ts
 └── tsconfig.json # typescript rules live here
 ```

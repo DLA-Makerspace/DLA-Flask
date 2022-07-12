@@ -1,7 +1,7 @@
 
 {% include 'nav.j2' %}
 
-
+<div class="header">Welcome to the DLA Makerspace!</div>
 
 <div class="flex-container">
     <div class="flex-left">
@@ -9,16 +9,29 @@
     </div>
     <div class="flex-right">
         <div class="container">
-            <div class="header">Welcome to the DLA Makerspace!</div>
-            <div class="intro">We are a small fabrication laboratory located on the fourth floor of Kennedy Hall, nestled within Cornell's Landscape Architecture Department.</div>
-            <div class="intro"> <i>On-site equipment includes:</i></div>
-            <div class="intro"> - <b>Freddie & Vaux</b>: Our 50 watt Epilog Edge lasercutter twins.</div>
-            <div class="intro"> - <b>Ada & Greta</b>: Our Ultimaker S3 twins and <b>Fender</b> our Ultimaker S5 3d printers.</div>
-            <div class="intro"> - <b>ShopBot</b>: We have a ShopBot Buddy 32 CNC router, slated to be ready for use for the 2022 fall semester.</div>
-            <div class="intro"> - <b>Tools & Materials</b>: We maintain a basic selection of materials, filaments, chemicals and related consumables, as well as a selection of hand tools including repair kits, digital calipers, a digital micrometer and feeler gauges.</div>
+            <!-- Slideshow container -->
+            {% include 'slide_widgets.j2' %}
+            <div class="mobile-view container">
+                <div class="intro">We are a small fabrication laboratory located on the fourth floor of Kennedy Hall, nestled within Cornell's Landscape Architecture Department.</div>
+                <div class="intro"> <i>On-site equipment includes:</i></div>
+                <div class="intro"> - <b>Freddie & Vaux</b>: Our 50 watt Epilog Edge lasercutter twins.</div>
+                <div class="intro"> - <b>Ada & Greta</b>: Our Ultimaker S3 twins and <b>Fender</b> our Ultimaker S5 3d printers.</div>
+                <div class="intro"> - <b>ShopBot</b>: We have a ShopBot Buddy 32 CNC router, slated to be ready for use for the 2022 fall semester.</div>
+                <div class="intro"> - <b>Tools & Materials</b>: We maintain a basic selection of materials, filaments, chemicals and related consumables, as well as a selection of hand tools including repair kits, digital calipers, a digital micrometer and feeler gauges.</div>
+            </div>
         </div>
     </div>
 </div>
+
+    <div class="screen-view">
+    <div class="intro">We are a small fabrication laboratory located on the fourth floor of Kennedy Hall, nestled within Cornell's Landscape Architecture Department.</div>
+    <div class="intro"> <i>On-site equipment includes:</i></div>
+    <div class="intro"> - <b>Freddie & Vaux</b>: Our 50 watt Epilog Edge lasercutter twins.</div>
+    <div class="intro"> - <b>Ada & Greta</b>: Our Ultimaker S3 twins and <b>Fender</b> our Ultimaker S5 3d printers.</div>
+    <div class="intro"> - <b>ShopBot</b>: We have a ShopBot Buddy 32 CNC router, slated to be ready for use for the 2022 fall semester.</div>
+    <div class="intro"> - <b>Tools & Materials</b>: We maintain a basic selection of materials, filaments, chemicals and related consumables, as well as a selection of hand tools including repair kits, digital calipers, a digital micrometer and feeler gauges.</div>
+    </div>
+
 
 <div id="content-wrapper" class="card-hide">
     <script>

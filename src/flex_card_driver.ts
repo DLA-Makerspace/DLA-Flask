@@ -14,8 +14,9 @@ interface Card extends Element {
   selectedToggle?: boolean | null;
 }
 
-
 class FlexCardAnimate {
+
+  mainEl = document.getElementsByClassName("page")[0];
 
   cards: NodeListOf<Element> = document.querySelectorAll('.flex-item');
 
@@ -24,9 +25,6 @@ class FlexCardAnimate {
     this.cards = document.querySelectorAll('.flex-item');
     this.isAnimating = false;
   }
-
-  // grab the button:
-  public button: HTMLButtonElement | null = document.querySelector('button')
 
   // initialize animation state:
   isAnimating: boolean = false;
@@ -110,8 +108,10 @@ class FlexCardAnimate {
   }
 
   clearCards = (card: Card) => {
+
     card.selectedToggle = false;
     this.revealCards(this.cards);
+
     setTimeout(() => {
       card.style = card.saveStyle;
     }, 500)
@@ -134,7 +134,7 @@ class FlexCardAnimate {
       let showSelected: Card | null = card.firstElementChild;
 
       // on click, do the things below.
-      card.addEventListener('click', () => {
+      this.mainEl!.addEventListener('click', () => {
         if (this.isAnimating) return
 
         // Toggle the value of the selected card
@@ -155,6 +155,7 @@ class FlexCardAnimate {
           card.style.top = sXY.y - 32 + 'px';
           card.style.left = sXY.x - 32 + 'px';
           card.style.width = 85 + '%';
+
 
           this.fadeCards(this.cards);
 

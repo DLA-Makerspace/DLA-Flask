@@ -78,10 +78,16 @@
     box-shadow: 1px 1px 2px #ffffff;
   }
   .flex-item:hover {
-   box-shadow: 1px 2px 2px #000;
-   background: #e3e3e3;
- }
-
+    box-shadow: 1px 2px 2px #000;
+    background: dimgrey;
+    animation-name: flex-item;
+    animation-timing-function: ease;
+  }
+  @keyframes flex-item {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
   .header {
     text-align: center;
     font-size: 24pt;
@@ -181,9 +187,16 @@
     box-shadow: 1px 1px 2px #ffffff;
   }
  .flex-item:hover {
-  box-shadow: 1px 2px 2px #000;
-  background: #e3e3e3;
-}
+    box-shadow: 1px 2px 2px #000;
+    background: dimgrey;
+    animation-name: flex-item;
+    animation-timing-function: ease;
+  }
+  @keyframes flex-item {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
 
   .header {
     text-align: center;
@@ -213,13 +226,6 @@
 .card-show {
   opacity: 1;
 }
-
-/* smooth opacity transition */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 
 /**
  * Body CSS
